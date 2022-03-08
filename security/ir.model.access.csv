@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gestion_cours_intervenant,access.gestion_cours.intervenant,model_gestion_cours_intervenant,,1,1,1,1
+access_gestion_cours_cours,access.gestion_cours.cours,model_gestion_cours_cours,,1,1,1,1
+access_gestion_cours_specialite,access.gestion_cours.specialite,model_gestion_cours_specialite,,1,1,1,1
+access_gestion_cours_bureau,access.gestion_cours.bureau,model_gestion_cours_bureau,,1,1,1,1

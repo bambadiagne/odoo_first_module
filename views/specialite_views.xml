@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="gestion_cours_specialite_action" model="ir.actions.act_window">
+        <field name="name">Specialités</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gestion_cours.specialite</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="view_id" eval="False"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+          </p>
+        </field>
+    </record>
+    <record id="gestion_cours_specialite_tree" model="ir.ui.view">
+        <field name="name">gestion_cours.specialite.tree</field>
+        <field name="model">gestion_cours.specialite</field>
+        <field name="arch" type="xml">
+            <tree string="La liste des specialites">
+                <field name="domaine"/>
+                <field name="specialite"/>
+            </tree>
+        </field>
+    </record>
+    <record id="gestion_cours_specialite_search" model="ir.ui.view">
+        <field name="model">gestion_cours.specialite</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="domaine"/>
+                <field name="specialite"/>
+            </search>
+        </field>
+    </record>
+    <record id="gestion_cours_specialite_form" model="ir.ui.view">
+        <field name="name">gestion_cours.specialite.form</field>
+        <field name="model">gestion_cours.specialite</field>
+        <field name="arch" type="xml">
+            <form string="Détail d'un specialite">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="domaine"/>
+                            <field name="specialite"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <menuitem
+        name="gestion_cours"
+        id="menu_gestion_cours_root"/>
+    <menuitem
+        id="menu_gestion_cours_specialite"
+        name="specialite"
+        parent="menu_gestion_cours_root"
+        action="gestion_cours_specialite_action"
+        sequence="5"/>
+</odoo>
